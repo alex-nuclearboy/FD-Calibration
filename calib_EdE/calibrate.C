@@ -79,7 +79,7 @@ MyMainFrame::MyMainFrame(const TGWindow *p, TString RDfilename)
   fRDfilename="calib_EdE_data.root"; // May-June 2014 pd->pd pi0 150 Runs
 
   if (RDfilename!="") fRDfilename=RDfilename;
-  fMCfilename="calib_EdE_MC_pd-pdpi0.root"; // pd -> pd pi0 - MC for pd calibration
+  fMCfilename="calib_EdE_mc_pd-pdpi0.root"; // pd -> pd pi0 - MC for pd calibration
   fRDfile=new TFile(fRDfilename);
   fMCfile=new TFile(fMCfilename);
 
