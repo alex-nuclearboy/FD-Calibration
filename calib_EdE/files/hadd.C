@@ -43,11 +43,11 @@ void hadd() {
    // root > .L hadd.C
    // root > hadd()
 
-  Target = TFile::Open( "../calib_EdE_MC_pd-pdpi0.root", "RECREATE" );
-  //Target = TFile::Open( "../calib_EdE_data.root", "RECREATE" );
+  //Target = TFile::Open( "../calib_EdE_MC_pd-pdpi0.root", "RECREATE" );
+  Target = TFile::Open( "../calib_EdE_data.root", "RECREATE" );
 
   FileList = new TList();
-
+/*
   FileList->Add( TFile::Open("calib_EdE_mc_pd-pdpi0-1.root"));
   FileList->Add( TFile::Open("calib_EdE_mc_pd-pdpi0-2.root"));
   FileList->Add( TFile::Open("calib_EdE_mc_pd-pdpi0-3.root"));
@@ -58,8 +58,8 @@ void hadd() {
   //FileList->Add( TFile::Open("calib_EdE_mc_pd-pdpi0-8.root"));
   //FileList->Add( TFile::Open("calib_EdE_mc_pd-pdpi0-9.root"));
   //FileList->Add( TFile::Open("calib_EdE_mc_pd-pdpi0-10.root"));
+*/
 
-/*
   FileList->Add( TFile::Open("calib_EdE_run_46050.root"));
   FileList->Add( TFile::Open("calib_EdE_run_46051.root"));
   FileList->Add( TFile::Open("calib_EdE_run_46052.root"));
@@ -281,8 +281,7 @@ void hadd() {
   FileList->Add( TFile::Open("calib_EdE_run_46772.root"));
   FileList->Add( TFile::Open("calib_EdE_run_46773.root"));
   FileList->Add( TFile::Open("calib_EdE_run_46774.root"));
-*/
-  
+
   MergeRootfile( Target, FileList );
 
 }   
