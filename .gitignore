@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+#
+main
+mainDict*
+mainDict.*
+smear.txt
+*.root
+*.log
+calib_*.sh
