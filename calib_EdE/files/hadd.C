@@ -10,17 +10,17 @@
   This code is based on the hadd.C example by Rene Brun and Dirk Geppert,
   which had a problem with directories more than one level deep.
   (see macro hadd_old.C for this previous implementation).
-  
-  The macro from Sven has been enhanced by 
+
+  The macro from Sven has been enhanced by
      Anne-Sylvie Nicollerat <Anne-Sylvie.Nicollerat@cern.ch>
    to automatically add Trees (via a chain of trees).
-  
+
   To use this macro, modify the file names in function hadd.
-  
+
   NB: This macro is provided as a tutorial.
       Use $ROOTSYS/bin/hadd to merge many histogram files
 
- */
+*/
 
 
 #include <string.h>
@@ -43,7 +43,7 @@ void hadd() {
    // root > .L hadd.C
    // root > hadd()
 
-  //Target = TFile::Open( "../calib_EdE_MC_pd-pdpi0.root", "RECREATE" );
+  //Target = TFile::Open( "../calib_EdE_mc_pd-pdpi0.root", "RECREATE" );
   Target = TFile::Open( "../calib_EdE_data.root", "RECREATE" );
 
   FileList = new TList();
@@ -284,12 +284,12 @@ void hadd() {
 
   MergeRootfile( Target, FileList );
 
-}   
+}
 
 void MergeRootfile( TDirectory *target, TList *sourcelist ) {
 
   cout << "Target path: " << target->GetPath() << endl;
-  
+
   TString path( (char*)strstr( target->GetPath(), ":" ) );
   path.Remove( 0, 2 );
 
@@ -317,13 +317,13 @@ void MergeRootfile( TDirectory *target, TList *sourcelist ) {
       // correspondant histogram to the one pointed to by "h1"
       TFile *nextsource = (TFile*)sourcelist->After( first_source );
       while ( nextsource ) {
-        
+
         // make sure we are at the correct directory level by cd'ing to path
         nextsource->cd( path );
         TH1 *h2 = (TH1*)gDirectory->Get( h1->GetName() );
         if ( h2 ) {
           h1->Add( h2 );
-          delete h2; // don't know if this is necessary, i.e. if 
+          delete h2; // don't know if this is necessary, i.e. if
                      // h2 is created by the call to gDirectory above.
         }
 
@@ -331,7 +331,7 @@ void MergeRootfile( TDirectory *target, TList *sourcelist ) {
       }
     }
     else if ( obj->IsA()->InheritsFrom( "TTree" ) ) {
-      
+
       // loop over all source files create a chain of Trees "globChain"
       const char* obj_name= obj->GetName();
 
@@ -341,7 +341,7 @@ void MergeRootfile( TDirectory *target, TList *sourcelist ) {
       //      const char* file_name = nextsource->GetName();
       // cout << "file name  " << file_name << endl;
      while ( nextsource ) {
-     	  
+
        globChain->Add(nextsource->GetName());
        nextsource = (TFile*)sourcelist->After( nextsource );
      }
