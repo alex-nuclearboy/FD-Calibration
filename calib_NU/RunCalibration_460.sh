@@ -1,7 +1,7 @@
 #!/bin/bash
 for X in `seq 46050 1 46074`; do
         echo "run #${X}..."
-        output="/home/khreptak/Calibration/calib_NU/files/calib_NU_${X}"
+        output="files/calib_NU_${X}"
         if [ -e ${output}.root ]; then
                 echo "... is already done."
         else
