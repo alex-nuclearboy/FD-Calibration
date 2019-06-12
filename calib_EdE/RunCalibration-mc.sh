@@ -1,5 +1,5 @@
 #!/bin/bash
-for X in `seq 1 1 1`; do
+for X in `seq 1 1 5`; do
     input="${WMC_DATA}/$1-$X.ems.bz2"
     output="files/calib_EdE_mc_$1-$X"
     if [ -e ${input} ]; then
