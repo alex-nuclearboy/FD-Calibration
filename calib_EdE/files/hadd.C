@@ -48,16 +48,16 @@ void hadd() {
 
   FileList = new TList();
 
-  FileList->Add( TFile::Open("calib_EdE_MC_pd-pdpi0-1.root"));
-  FileList->Add( TFile::Open("calib_EdE_MC_pd-pdpi0-2.root"));
-  FileList->Add( TFile::Open("calib_EdE_MC_pd-pdpi0-3.root"));
-  FileList->Add( TFile::Open("calib_EdE_MC_pd-pdpi0-4.root"));
-  FileList->Add( TFile::Open("calib_EdE_MC_pd-pdpi0-5.root"));
-  //FileList->Add( TFile::Open("calib_EdE_MC_pd-pdpi0-6.root"));
-  //FileList->Add( TFile::Open("calib_EdE_MC_pd-pdpi0-7.root"));
-  //FileList->Add( TFile::Open("calib_EdE_MC_pd-pdpi0-8.root"));
-  //FileList->Add( TFile::Open("calib_EdE_MC_pd-pdpi0-9.root"));
-  //FileList->Add( TFile::Open("calib_EdE_MC_pd-pdpi0-10.root"));
+  FileList->Add( TFile::Open("calib_EdE_mc_pd-pdpi0-1.root"));
+  FileList->Add( TFile::Open("calib_EdE_mc_pd-pdpi0-2.root"));
+  FileList->Add( TFile::Open("calib_EdE_mc_pd-pdpi0-3.root"));
+  FileList->Add( TFile::Open("calib_EdE_mc_pd-pdpi0-4.root"));
+  FileList->Add( TFile::Open("calib_EdE_mc_pd-pdpi0-5.root"));
+  //FileList->Add( TFile::Open("calib_EdE_mc_pd-pdpi0-6.root"));
+  //FileList->Add( TFile::Open("calib_EdE_mc_pd-pdpi0-7.root"));
+  //FileList->Add( TFile::Open("calib_EdE_mc_pd-pdpi0-8.root"));
+  //FileList->Add( TFile::Open("calib_EdE_mc_pd-pdpi0-9.root"));
+  //FileList->Add( TFile::Open("calib_EdE_mc_pd-pdpi0-10.root"));
 
 /*
   FileList->Add( TFile::Open("calib_EdE_run_46050.root"));
