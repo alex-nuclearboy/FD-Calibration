@@ -12,8 +12,8 @@ For the May/June 2014 eta beamtime, we use runs 46050-46074 46275-46424 and 4675
 Each time you use FRHCalibAnalysis.cc remember to make sure that the trigger number you use for non-uniformity inside the program is corresponding to an elastic trigger number. We used trigger 21.
 
 Then we open ROOT environment load fitNU.C and execute it with the generated root file:
-    .L fitNU.C 
-    .x fitNU.C("calib_NU.root",layer_number)
+     .L fitNU.C
+     .x fitNU.C("calib_NU.root",layer_number)
   
 where layer_number is:
 
