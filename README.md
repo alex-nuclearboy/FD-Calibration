@@ -23,7 +23,7 @@ where layer_number is:
      4-6 = FRH  
      10-11 = FWC
   
-This action fits Theta vs ADC * theta spectra for each element of each plane/layer (push enter after each element output) and in the end generates non-uniformity calibration constants table (for the given layer).
+This action fits Theta vs ADC*theta spectra for each element of each plane/layer (push enter after each element output) and in the end generates non-uniformity calibration constants table (for the given layer).
 
 What we have to do now is to include those new parameter values to the corresponding CalibCards. Those changes will be made on the temporal verions of the CalibCards for safety reasons. First of all copy the CalibCards from wasa/Database in RootSorter to your local working directory and link them properly in .sorterrc:
 
@@ -52,7 +52,7 @@ Before going further we have to join the generated 200 calib_EdE_<given_run_for_
 
 Then, we open the ROOT environment and we run calibrate.C. Inside the calibrate.C program should be written the correct names of data.root and MC.root files. The nonlinearity calibration consist in adjusting two parameters for each element and layer that correspond to the formula:
 
-     <math>E_{dep} = ADC*C_{0}\frac{1}{1-ADC*\frac{C_{1}}{C_{0}}}</math>
+     E_{dep} = ADC*C_{0}\frac{1}{1-ADC*\frac{C_{1}}{C_{0}}}
 
 This is done fitting real data to MC simulation on a set of spectra representing the energy deposition of one layer vs another layer ("bananas"). For example, FRH1 vs FRH2, FTH1 vs FRH1 etc...
 
