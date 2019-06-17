@@ -30,10 +30,12 @@ What we have to do now is to include those new parameter values to the correspon
      Sorter.ParSource.CalibCardFDScint_FTHdefault: calib_tmp/CalibCardFDScint_FTHdefault
      Sorter.ParSource.CalibCardFDScint_FWCdefault: calib_tmp/CalibCardFDScint_FWCdefault
   
-The parameter table (skip the last column with 0 contents) has to be filled inside (after the column with "6") the corresponding CalibCardFDScint_x where x = FRHdefault/FTHdefault/FWCdefault.
+The parameter table (skip the last column with 0 contents) has to be filled inside (after the column with "6") the corresponding CalibCardFDScint_x, where x = FRHdefault/FTHdefault/FWCdefault.
 
      Eg.:
      1  1  4902.2  0.09497 0.   321.1  1.56250 0.  100 6 +8.257650e-01 -2.156795e-01 +7.332738e+00 -2.161129e+00 0.045 0.314 0 0 0 0 0 5 2.140e-05  1.000e-15  0 0 0
+  
+  
   
      Note: - All three FRH layers have 24 elements (theta sectors, pizza-like structure);
            - FTH layer has 48 elements;
