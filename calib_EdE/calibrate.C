@@ -375,9 +375,9 @@ void MyMainFrame::DoDraw()
 
 void MyMainFrame::DoReadDatabase()
 {
-    ReadDatabaseFile("/home/WASA-software/rootsorter/wasa/Database/temp_calib/CalibCardFDScint_FRHdefault_44961_46884");
-    ReadDatabaseFile("/home/WASA-software/rootsorter/wasa/Database/temp_calib/CalibCardFDScint_FTHdefault_44961_46884");
-    ReadDatabaseFile("/home/WASA-software/rootsorter/wasa/Database/temp_calib/CalibCardFDScint_FWCdefault_44961_46884");
+    ReadDatabaseFile("temp_calib/CalibCardFDScint_FRHdefault_44961_46884");
+    ReadDatabaseFile("temp_calib/CalibCardFDScint_FTHdefault_44961_46884");
+    ReadDatabaseFile("temp_calib/CalibCardFDScint_FWCdefault_44961_46884");
     //ReadDatabaseFile("/home/WASA-software/rootsorter/wasa/Database/CalibCardFDScint_FRHdefault");
     //ReadDatabaseFile("/home/WASA-software/rootsorter/wasa/Database/CalibCardFDScint_FTHdefault");
     //ReadDatabaseFile("/home/WASA-software/rootsorter/wasa/Database/CalibCardFDScint_FWCdefault");
@@ -387,14 +387,14 @@ void MyMainFrame::DoReadDatabase()
 
 void MyMainFrame::DoReadCalib()
 {
-    ReadCalibFile("/home/khreptak/Calibration/calib_EdE/temp_calib/calib_p_May_2014_old.tmp");
+    ReadCalibFile("temp_calib/calib_p_May_2014_old.tmp");
 
     DoDraw();
 }
 
 void MyMainFrame::DoWriteCalib()
 {
-    WriteCalibFile("/home/khreptak/Calibration/calib_EdE/temp_calib/calib_p_May_2014_new.tmp");
+    WriteCalibFile("temp_calib/calib_p_May_2014_new.tmp");
 }
 
 void MyMainFrame::DoExit()
